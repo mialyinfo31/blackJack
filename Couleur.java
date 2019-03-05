@@ -8,5 +8,4 @@ package blackJack;
  */
 public enum Couleur {
 	Coeur, Carreau, Treffle, Pique;
-
 }

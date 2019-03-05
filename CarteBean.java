@@ -1,30 +1,19 @@
 package blackJack;
 
 public class CarteBean {
-	protected boolean visible;
-	protected Couleur color;
 	protected Valeur value;
+	protected Couleur color;
+	protected boolean isVisible;
 
 	/**
 	 * CONSTRUCTOR
 	 */
-	public CarteBean() {
-		super();
-	}
 
-	public CarteBean(boolean visible, Couleur color, Valeur value) {
+	public CarteBean(Valeur value, Couleur color, boolean visible) {
 		super();
-		this.visible = visible;
+		isVisible = visible;
 		this.color = color;
 		this.value = value;
-	}
-
-	/**
-	 * MEHTODES
-	 */
-
-	public void affichercarte() {
-
 	}
 
 	/**
@@ -35,21 +24,17 @@ public class CarteBean {
 		return color;
 	}
 
-	public CarteBean(boolean visible) {
-		super();
-		this.visible = visible;
-	}
-
-	public void setColor(Couleur color) {
-		this.color = color;
-	}
-
 	public Valeur getValue() {
 		return value;
 	}
 
-	public void setValue(Valeur value) {
-		this.value = value;
+	/**
+	 * Pour éviter d'avoir le pointeur reconfigurer le @override dans source
+	 */
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return value + " de " + color;
 	}
 
 }
